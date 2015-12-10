@@ -1,0 +1,4 @@
+# Users access
+users_form_homepage:
+    path:     /
+    defaults: { _controller: UsersFormBundle:Default:index }
