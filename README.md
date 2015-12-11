@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-SupLife
+SUPLIFE
 =======
 
-A Symfony project created on December 8, 2015, 12:31 pm.
-=======
-# 4MET-SupLife
->>>>>>> origin/developpement
+A Symfony project created on December 9, 2015, 8:36 pm.
