@@ -1,0 +1,70 @@
+body {
+	background: url(../images/background.png); 
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+}
+
+#loginbox {	
+	margin-top: 15%;
+}
+
+.panel-title a:link{
+	float:right; 
+	font-size: 80%; 
+	position: relative; 
+	bottom:-10px;
+}
+
+#login-alert {
+	display:none;
+}
+
+.input-group {	
+	margin-bottom: 5%;
+	padding: 3px;
+}
+
+.btn{
+	width: 20%;
+	position: relative; 
+	bottom: -7px;
+	left: 5px;
+}
+
+.form-group img {
+	float: right;
+	width:140px;
+	height:50px;
+	position: relative; 
+	bottom: 3px;
+	left: -5px;
+}
+
+#signupbox{
+	display:none; 
+	margin-top:15%;
+}
+
+.radio-inline{
+	margin-left: -8px;
+	margin-right: 10px;
+}
+
+#loginform label.error {
+	position: absolute;
+	left: 47px;
+	top: 43px;
+	color: red;
+	font-weight: normal;
+}
+
+#signupform label.error {
+	color: red;
+	font-weight: normal;
+}
+
+.radio-inline label.error {
+	color: red;
+	font-weight: normal;
+}

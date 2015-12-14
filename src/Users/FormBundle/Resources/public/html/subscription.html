@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SupLife</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../css/subscription.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/additional-methods.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="../script/subscription.js"></script>
+</head>
+
+<body background="background.png">
+	<div class="container">
+		<div id="loginbox" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+			 <div class="panel panel-primary">
+				<div class="panel-heading">
+					<div class="panel-title">Log In<a href="#">Forgot password?</a></div>       
+				</div>  
+						
+				<div class="panel-body">
+					
+					<div id="login-alert" class="alert alert-danger col-sm-12"></div>
+					
+					<form id="loginform" class="form-horizontal" onsubmit="return(validate());">
+					
+						<div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                        <input id="login-email" type="email" class="form-control" name="email" placeholder="Email">										                                      
+                        </div>
+									
+						<div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                        <input id="login-password" type="password" class="form-control" name="password" placeholder="Password">
+                        </div>		
+						
+						
+						
+						<div class="form-group">
+                                    <div class="col-sm-12 controls">
+                                      <button id="btn-login"  type="submit" class="btn btn-primary">Login</button>
+									  <img src="../images/supinfo.png" class="img-rounded" alt="logo">
+									 </div>
+						</div>
+												
+						<div class="form-group">
+                                    <div class="col-md-12 control">
+                                        <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" > Don't have an account! 
+                                        <a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">Sign Up Here</a>        
+                                        </div>
+                                    </div>
+                        </div>    
+                    </form>
+				</div>
+			</div>
+		</div>
+		
+		 <div id="signupbox" class="mainbox col-md-6 col-md-offset-3 col-sm-9 col-sm-offset-2">
+            <div class="panel panel-primary">
+                 <div class="panel-heading">
+                    <div class="panel-title">Sign Up<a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</a></div>  				
+                 </div>  
+                     <div class="panel-body" >
+                         <form id="signupform" class="form-horizontal" role="form">
+                                
+                         <div id="signupalert" style="display:none" class="alert alert-danger">
+                            <p>Error:</p>
+                             <span></span>
+                         </div>
+                                    
+                         <div class="form-group">
+                             <label for="firsName" class="col-md-2 control-label"><i class="glyphicon glyphicon-user" style="margin-right: 10px;"></i></label>
+                                <div class="col-md-9">
+                                     <input type="text" class="form-control" name="firstName" placeholder="First Name" style="margin-left: -10px;">
+                                </div>
+                         </div>
+								
+							<div class="form-group">
+								<label for="lastName" class="col-md-2 control-label"><i class="glyphicon glyphicon-user" style="margin-right: 10px;"></i></label>
+									<div class="col-md-9">
+                                        <input type="text" class="form-control" name="lastName" placeholder="Last Name"  style="margin-left: -10px;">
+                                    </div>
+							</div>
+								
+							<div class="form-group">
+								<label for="email" class="col-md-2 control-label"><i class="glyphicon glyphicon-envelope" style="margin-right: 10px;"></i></label>
+								<div class="col-md-9">
+									<input type="text" class="form-control" name="email" placeholder="Email Address" style="margin-left: -10px;">
+								</div>
+							</div>
+								
+							<div class="form-group">
+								<label for="gender" class="col-md-2 control-label"><i class="glyphicon glyphicon-heart-empty" style="margin-right: 10px;"></i></label>
+								<div class="col-md-9">
+									<label class="radio-inline"><input type="radio" name="genderRadio" value="male">Male</label>
+									<label class="radio-inline"><input type="radio" name="genderRadio" value="female">Female</label>
+								</div>
+							</div>
+								
+							<div class="form-group">
+								<label for="year" class="col-md-2 control-label"><i class="glyphicon glyphicon-education" style="margin-right: 10px;"></i></label>
+								<div class="col-md-10">
+									<label class="radio-inline"><input type="radio" name="yearRadio">A.Sc.1</label>
+									<label class="radio-inline"><input type="radio" name="yearRadio">A.Sc.1</label>
+									<label class="radio-inline"><input type="radio" name="yearRadio">B.Sc.1</label>
+									<label class="radio-inline"><input type="radio" name="yearRadio">M.Sc.1</label>
+									<label class="radio-inline"><input type="radio" name="yearRadio">M.Sc.2</label>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="password" class="col-md-2 control-label"><i class="glyphicon glyphicon-lock" style="margin-right: 10px;"></i></label>
+								<div class="col-md-9">
+									<input type="password" id="password"  class="form-control" name="password" placeholder="Password" style="margin-left: -10px;">
+									
+								</div>
+							</div>	
+							
+							<div class="form-group">
+								<label for="verifyPassword" class="col-md-2 control-label"><i class="glyphicon glyphicon-lock" style="margin-right: 10px;"></i></label>
+								<div class="col-md-9">
+									<input type="password" class="form-control" name="verifyPassword" placeholder="Verify Password" style="margin-left: -10px;">					
+								</div>
+							</div>
+							
+							<div class="form-group">                                        
+								<div class="col-md-offset-1 col-md-12">
+									<button id="btn-signup" type="submit" class="btn btn-primary" style="margin-bottom: -35px; margin-left: 35px;">Sign Up</button>
+									<img src="../images/logo.png" class="img-rounded" alt="logo" style="float: right;width:40px;height:40px;position: relative; bottom:-10px;left: -105px;">
+								</div>
+							</div>
+						</div>	
+			</div>	
+		</div>	
+	</div>	
+</body>
+</html>
