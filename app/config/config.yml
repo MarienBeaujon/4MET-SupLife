@@ -31,6 +31,9 @@ framework:
         handler_id:  ~
     fragments:       ~
     http_method_override: true
+    # Disable symfony2 profil toolbar
+    profiler:
+        collect: false
 
 # Twig Configuration
 twig:
